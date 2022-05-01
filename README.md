@@ -4,39 +4,62 @@
 This repository is containing portfolio of data science and data analyst projects completed by me (and sometimes with my team) for academic, self learning, and hobby purposes.
 Presented in the form of iPython Notebooks.
 
-## Contents
-- Data Analysis and Visualization [[Kaggle.com](https://www.kaggle.com/)]
-  * [Pokémon Stats EDA \[ENG\]](https://github.com/Iqrar99/data-science-portfolio/blob/master/Pok%C3%A9mon%20Stats%20EDA.ipynb)
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Iqrar99/data-science-portfolio/blob/master/Pok%C3%A9mon%20Stats%20EDA.ipynb)
+# Contents
+- ## ETL Project Analysis
 
-  This dataset includes 721 Pokemon, including their number, name, first and second type, and basic stats: HP, Attack, Defense, Special Attack, Special Defense, and Speed. It has been of great use when teaching statistics to kids.
-  * [Ramen Ratings EDA \[ENG\]](https://github.com/Iqrar99/data-science-portfolio/blob/master/ramen-ratings-eda.ipynb)
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Iqrar99/data-science-portfolio/blob/master/ramen-ratings-eda.ipynb)
+### Project Summary
+The objective of this project was to extract data from websites and available  APIs. The resulting datasets were then transformed by cleaning, joining, and filtering into nine tables. The object-relational database, PostgreSQL, was used to load the datasets into pgAdmin. Thus completing a functional ETL pipeline.
 
-  Each record in the dataset is a single ramen product review. Review numbers are contiguous: more recently reviewed ramen varieties have higher numbers. Brand, Variety (the product name), Country, and Style (Cup? Bowl? Tray?) are pretty self-explanatory. Stars indicate the ramen quality, as assessed by the reviewer, on a 5-point scale.
-  * [Lokasi Mudik Karyawan \[IDN\]](https://github.com/Iqrar99/data-science-portfolio/blob/master/Lokasi%20Mudik%20Karyawan.ipynb)
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Iqrar99/data-science-portfolio/blob/master/Lokasi%20Mudik%20Karyawan.ipynb)
-  
-  This notebook was for participating in Data Science Academy Compfest 2019 selection. 
-  Thank you my teammates ([Rony Agus Vian](https://www.linkedin.com/in/ronyagusvian/) and [Fransiscus Emmanuel Bunaren](https://www.linkedin.com/in/fransiscus-emmanuel-bunaren-ba4084192/)) for completing this notebook.
-  * [Student Performance in Exams \[ENG\]](https://github.com/Iqrar99/data-science-portfolio/blob/master/student-performance-in-exams.ipynb)
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Iqrar99/data-science-portfolio/blob/master/student-performance-in-exams.ipynb)
-  
-  This data set consists of the marks secured by the students in various subjects. The inspirations are to understand the influence of the parents background, test preparation etc on students performance. [Acknowledgements](http://roycekimmons.com/tools/generated_data/exams).
-- Data Mining
-  * [Predicting Cancellation of Hotel Bookings \[IDN\]](https://github.com/Iqrar99/data-science-portfolio/blob/master/Hotel%20Bookings.ipynb)
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Iqrar99/data-science-portfolio/blob/master/Hotel%20Bookings.ipynb)
-  
-  In this data, there are 2 hotel types. One of the hotels (H1) is a resort hotel and the other is a city hotel (H2). Both datasets share the same structure, with 31 variables describing the 40,060 observations of H1 and 79,330 observations of H2. Each observation represents a hotel booking. The tasks are to predict booking cancellations and analyze all factors that cause the cancellations. <br>
-  Thank you my teammates ([Kevin Asyraf](https://www.linkedin.com/in/kevinasyraf/) and [Samuel Anderssen](https://www.linkedin.com/in/samuelanderssen/)) for the contributions.
-- Machine Learning
-  * [Classify the Ghouls, Goblins, and Ghosts using Voting Classifier \[ENG\]](https://github.com/Iqrar99/data-science-portfolio/blob/master/ghouls-goblins-and-ghosts-voting-classifier.ipynb)
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Iqrar99/data-science-portfolio/blob/master/ghouls-goblins-and-ghosts-voting-classifier.ipynb)
+## Data sources
 
-  Based on the entity characteristics, we should classify them. Some ensemble models used to predict the dataset and combined them using Voting Classifier.
+The following Data Sources were used:
+- [IMDb Website](https://www.imdb.com/chart/top/?ref_=nv_mv_250)
+    - Method: Webscraping extraction
+    - Used for: Collecting the Top 250 IMDB rated movie list
 
-  * [Doing Sentiment Analysis for Disneyland Reviews data and predicting the rating using Convolutional Neural Network](https://github.com/Iqrar99/data-science-portfolio/blob/master/Disney-Land-Reviews.ipynb)
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Iqrar99/data-science-portfolio/blob/master/Disney-Land-Reviews.ipynb)
-  
-  The dataset includes information related to reviews addressed by the customers and the venue rating.
-  
+- [OMDb API](http://www.omdbapi.com/)
+    - Method: API Extraction
+    - Used for: Collecting IMDb id and other movie related details like actor, director, etc.
+
+- [Utelly API](https://rapidapi.com/utelly/api/utelly?endpoint=apiendpoint_3cad787b-ca7b-449a-84b4-23b40d64fd73)
+    - Method: API Extraction
+    - Used For: Collecting streaming options for Top 250 IMDb movies
+
+- [uNoGS API](https://rapidapi.com/unogs/api/unogs/endpoints)
+    - Method: API Extraction
+    - Used For: Collecting movies on Netflix in released in the United States which have an IMDb rating between 7 and 10
+
+- [Google Search Engine](https://www.google.com/search?&q=)
+    - Method: Webscraping extraction
+    - Used for: Collecting viewing Streaming Service availability and price 
+
+## Data Cleanup & Analysis
+
+- Data extracted were formated in CSV and JSON files
+- The following datasets were then transformed by cleaning, joining, and filtering into nine tables
+- The object-relational database, PostgreSQL, was used to load the datasets into pgAdmin.
+
+
+## Project folders:
+
+- **E**xtract: 
+    - `Google scraping.ipynb`: 
+        - contains IMDB website and Google Search Engine Webscraping
+    - `netflix_high_imdb_rated(uNoGS api).ipynb`:
+        - contains IMDB website Webscraping, OMDb API, and uNoGS API extraction
+    -  `streaming_options(utelly api).ipynb`:
+        - contains Utelly API extraction
+
+- **T**ransform:
+    - `Transform.ipynb`:
+        - contains all datasets that were transformed into nine tables
+
+- **L**oad:
+    - `SQL` folder:
+        - contains ERD and schema
+    - `SQL_Table` folder:
+        - contains the creation of and all nine tables created in pgAdmin with PostgreSQL
+    - [Project Report document](https://github.com/Latha-G/ETL-Project/blob/master/Project%20Report.pdf):
+        - contains detailed project description and sample PostgreSQL queries in pgAdmin
+
+
