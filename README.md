@@ -4,7 +4,7 @@ This repository is containing portfolio of data science and data analyst project
 Presented in the form of iPython Notebooks.
 
 # Contents
-- ## ETL Project Analysis
+-- ## ETL pipeline
 
 ### Project Summary
 The objective of this project was to extract data from websites and available  APIs. The resulting datasets were then transformed by cleaning, joining, and filtering into nine tables. The object-relational database, PostgreSQL, was used to load the datasets into pgAdmin. Thus completing a functional ETL pipeline.
