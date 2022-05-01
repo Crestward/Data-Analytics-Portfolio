@@ -3,13 +3,13 @@
 This repository is containing portfolio of data science and data analyst projects completed by me (and sometimes with my team) for academic, self learning, and hobby purposes.
 Presented in the form of iPython Notebooks.
 
-# Contents
--- ## ETL pipeline
+## Contents:
+### ETL pipeline
 
-### Project Summary
+#### Project Summary
 The objective of this project was to extract data from websites and available  APIs. The resulting datasets were then transformed by cleaning, joining, and filtering into nine tables. The object-relational database, PostgreSQL, was used to load the datasets into pgAdmin. Thus completing a functional ETL pipeline.
 
-## Data sources
+#### Data sources
 
 The following Data Sources were used:
 - [IMDb Website](https://www.imdb.com/chart/top/?ref_=nv_mv_250)
@@ -32,14 +32,14 @@ The following Data Sources were used:
     - Method: Webscraping extraction
     - Used for: Collecting viewing Streaming Service availability and price 
 
-## Data Cleanup & Analysis
+#### Data Cleanup & Analysis
 
 - Data extracted were formated in CSV and JSON files
 - The following datasets were then transformed by cleaning, joining, and filtering into nine tables
 - The object-relational database, PostgreSQL, was used to load the datasets into pgAdmin.
 
 
-## Project folders:
+#### Project folders:
 
 - **E**xtract: 
     - `Google scraping.ipynb`: 
